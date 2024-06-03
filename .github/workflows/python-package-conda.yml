@@ -29,7 +29,8 @@ jobs:
 
     - uses: ncipollo/release-action@v1
       with:
-        commit: "${GITHUB_SHA}${{github.sha}}"
+        commit: "${{github.sha}}"
+        tag: "${{github.sha}}"
         artifacts: "dist/*.egg"
 #        bodyFile: "readme.md"
         body: "Automatic release"

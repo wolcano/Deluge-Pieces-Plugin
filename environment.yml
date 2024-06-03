@@ -1,9 +1,0 @@
-channels:
-  - conda-forge
-  - defaults
-dependencies:
-  - pip>=24
-  - python=3.9
-  - setuptools>=65
-  - tzdata>=2024a
-  - wheel>=0.43

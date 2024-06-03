@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 5
+    permissions:
+      contents: write
 
     steps:
     - uses: actions/checkout@v4
@@ -24,3 +26,9 @@ jobs:
         name: pieces
         path: |
           dist/*.egg
+
+    - uses: ncipollo/release-action@v1
+      with:
+        artifacts: "dist/*.egg"
+#        bodyFile: "readme.md"
+        body: "Automatic release"
